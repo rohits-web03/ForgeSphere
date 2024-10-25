@@ -18,9 +18,14 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Web3 Wallet",
-  description: "Your personal web3 wallet",
+  title: "ForgeSphere",
+  description: "ForgeSphere empowers you to create secure wallets and manage public-private key pairs",
 };
+
+// export const metadata: Metadata = {
+//   title: "ForgeSphere - Multi-Chain Wallet & Token Platform",
+//   description: "ForgeSphere empowers you to create secure wallets, manage public-private key pairs, and launch tokens on Solana and Ethereum. Experience seamless connectivity across blockchains with robust wallet and token management tools.",
+// };
 
 export default function RootLayout({
   children,
