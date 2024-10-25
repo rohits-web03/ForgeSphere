@@ -114,11 +114,11 @@ const WalletGenerator = () => {
     );
     };
 
-    const togglePhraseVisibility = (index: number) => {
-    setVisiblePhrases(
-        visiblePhrases.map((visible, i) => (i === index ? !visible : visible))
-    );
-    };
+    // const togglePhraseVisibility = (index: number) => {
+    //   setVisiblePhrases(
+    //       visiblePhrases.map((visible, i) => (i === index ? !visible : visible))
+    //   );
+    // };
 
     const generateWalletFromMnemonic = (
         pathType: string,
@@ -163,7 +163,7 @@ const WalletGenerator = () => {
         };
         } catch (error) {
             toast({
-                description:"Failed to generate wallet. Please try again.",
+                description:`Failed to generate wallet due to ${error}. Please try again.`,
                 variant:'destructive'
             });
             return null;
@@ -452,7 +452,7 @@ const WalletGenerator = () => {
                 gridView ? "md:grid-cols-2 lg:grid-cols-3" : ""
               }`}
             >
-              {wallets.map((wallet: any, index: number) => (
+              {wallets.map((wallet: Wallet, index: number) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: -20 }}
